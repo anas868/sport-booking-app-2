@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "135946724515",
+    "project_id": "sportbookingapp-51a68",
+    "storage_bucket": "sportbookingapp-51a68.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135946724515:android:099724e22c4b62c2624b16",
+        "android_client_info": {
+          "package_name": "com.example.first"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqkMyYOCkvLoH6-wW7r1ZqVfi0HeHg3OY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

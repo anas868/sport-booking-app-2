@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <string name="app_name">Sport Booking App</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="my_bookings">My Bookings</string>
+    <string name="book_now">Book Now</string>
+    <string name="full_name">Full Name</string>
+    <string name="field_name">ملعب كرة قدم</string>
+    <string name="enter_time">أدخل الوقت</string>
+    <string name="book_btn">تأكيد الحجز</string>
+</resources>
+
+
+

@@ -1,43 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:padding="24dp"
-    android:gravity="center"
-    android:layoutDirection="rtl">
+    android:background="#141420">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sport Booking"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#CBB8FF"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="50dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="تسجيل الدخول"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="right"
+        android:layout_marginBottom="24dp" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="البريد الإلكتروني"
         android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0B0B0"
+        android:backgroundTint="#CBB8FF"
+        android:padding="14dp"
+        android:layout_marginBottom="20dp" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="كلمة المرور"
         android:inputType="textPassword"
-        android:layout_marginBottom="20dp"/>
+        android:textColor="#FFFFFF"
+        android:textColorHint="#B0B0B0"
+        android:backgroundTint="#CBB8FF"
+        android:padding="14dp"
+        android:layout_marginBottom="28dp" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="تسجيل دخول"/>
-
+        android:layout_height="60dp"
+        android:text="تسجيل دخول"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2E1F5E"
+        android:backgroundTint="#CBB8FF"
+        android:layout_marginBottom="20dp" />
 
     <TextView
         android:id="@+id/tvRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="إنشاء حساب جديد"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginTop="16dp"/>
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp" />
 
 </LinearLayout>

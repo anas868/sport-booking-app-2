@@ -3,28 +3,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:layoutDirection="rtl">
+    android:padding="20dp"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="حجز الملعب"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:layout_marginBottom="20dp" />
 
     <TextView
         android:id="@+id/tvField"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="اسم الملعب"
         android:textSize="20sp"
-        android:layout_marginBottom="20dp"/>
+        android:textStyle="bold"
+        android:textColor="@color/primaryDark"
+        android:background="@color/white"
+        android:padding="14dp"
+        android:layout_marginBottom="16dp" />
 
     <EditText
         android:id="@+id/etTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="ادخل الوقت"
-        android:layout_marginBottom="20dp"/>
+        android:hint="أدخل وقت الحجز"
+        android:textSize="18sp"
+        android:background="@android:drawable/edit_text"
+        android:padding="14dp"
+        android:layout_marginBottom="20dp" />
 
     <Button
         android:id="@+id/btnBook"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="تأكيد الحجز"/>
+        android:layout_height="60dp"
+        android:text="✅ تأكيد الحجز"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary" />
 
 </LinearLayout>

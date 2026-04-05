@@ -3,28 +3,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:layoutDirection="rtl">
+    android:padding="16dp"
+    android:background="@color/background">
 
+    <!-- العنوان -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="الملاعب المتاحة"
-        android:textSize="20sp"
+        android:text="اختر الملعب"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
+        android:textColor="@color/primary"
+        android:layout_marginBottom="20dp" />
 
+    <!-- زر كرة قدم -->
     <Button
         android:id="@+id/btnField1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ملعب كرة قدم"/>
+        android:layout_height="60dp"
+        android:text="⚽ ملعب كرة قدم"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        android:layout_marginBottom="12dp" />
 
+    <!-- زر كرة سلة -->
     <Button
         android:id="@+id/btnField2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ملعب كرة سلة"
-        android:layout_marginTop="10dp"/>
+        android:layout_height="60dp"
+        android:text="🏀 ملعب كرة سلة"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary"
+        android:layout_marginBottom="12dp" />
+
+    <!-- زر عرض الحجوزات -->
+    <Button
+        android:id="@+id/btnViewBookings"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="📋 عرض الحجوزات"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/accent"
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>

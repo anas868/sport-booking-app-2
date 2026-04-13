@@ -88,7 +88,7 @@ public class BookingActivity extends AppCompatActivity {
                 }
 
                 if (isBooked) {
-                    Toast.makeText(this, "هذا الوقت غير متاح. يجب أن يكون بين كل حجز وآخر ساعة ونصف", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "هذا الوقت محجوز، يرجى اختيار وقت آخر", Toast.LENGTH_LONG).show();
                 } else {
                     String id = database.push().getKey();
                     Booking booking = new Booking(id, fieldName, time);

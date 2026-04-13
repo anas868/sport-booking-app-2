@@ -22,8 +22,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
 
-        email = findViewById(R.id.email);
-        password = findViewById(R.id.password);
+        email = findViewById(R.id.etEmail);
+        password = findViewById(R.id.etPassword);
         TextView tvLogin = findViewById(R.id.tvLogin);
 
         findViewById(R.id.btnRegister).setOnClickListener(v -> {

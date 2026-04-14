@@ -7,12 +7,14 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.first.R;
 import com.example.first.model.Booking;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -37,19 +39,40 @@ public class BookingAdapter extends ArrayAdapter<Booking> {
         View listViewItem = inflater.inflate(R.layout.item_booking, parent, false);
 
         TextView tvField = listViewItem.findViewById(R.id.tvField);
+        TextView tvDay = listViewItem.findViewById(R.id.tvDay);
+        TextView tvDate = listViewItem.findViewById(R.id.tvDate);
         TextView tvTime = listViewItem.findViewById(R.id.tvTime);
+        TextView tvDuration = listViewItem.findViewById(R.id.tvDuration);
         Button btnDelete = listViewItem.findViewById(R.id.btnDelete);
 
         Booking booking = bookingList.get(position);
 
         tvField.setText(booking.getField());
-        tvTime.setText(booking.getTime());
+        tvDay.setText("اليوم: " + booking.getDay());
+        tvDate.setText("التاريخ: " + booking.getDate());
+        tvTime.setText("الساعة: " + booking.getTime());
+        tvDuration.setText("المدة: " + booking.getDuration());
 
-        // 🔥 زر الحذف
-        btnDelete.setOnClickListener(v -> {
-            DatabaseReference ref = FirebaseDatabase.getInstance().getReference("bookings");
-            ref.child(booking.getId()).removeValue();
-        });
+        String currentUserEmail = "";
+        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+            currentUserEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        }
+
+        if (booking.getOwnerEmail() != null && booking.getOwnerEmail().equals(currentUserEmail)) {
+            btnDelete.setVisibility(View.VISIBLE);
+
+            btnDelete.setOnClickListener(v -> {
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference("bookings");
+                ref.child(booking.getId()).removeValue()
+                        .addOnSuccessListener(unused ->
+                                Toast.makeText(context, "تم حذف الحجز", Toast.LENGTH_SHORT).show())
+                        .addOnFailureListener(e ->
+                                Toast.makeText(context, "فشل الحذف", Toast.LENGTH_SHORT).show());
+            });
+
+        } else {
+            btnDelete.setVisibility(View.GONE);
+        }
 
         return listViewItem;
     }

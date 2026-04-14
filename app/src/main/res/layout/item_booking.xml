@@ -1,39 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:padding="12dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#1E1E2E">
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#FFFFFF"
+    android:layout_margin="8dp">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tvField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اسم الملعب"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#1B5E20" />
 
-        <TextView
-            android:id="@+id/tvField"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:text="اسم الملعب"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اليوم"
+        android:textColor="#555555" />
 
-        <TextView
-            android:id="@+id/tvTime"
-            android:textColor="#AAAAAA"
-            android:text="الوقت"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="التاريخ"
+        android:textColor="#555555" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الساعة"
+        android:textColor="#555555" />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="المدة"
+        android:textColor="#555555"
+        android:layout_marginBottom="10dp" />
 
     <Button
         android:id="@+id/btnDelete"
-        android:text="حذف"
-        android:backgroundTint="#E53935"
-        android:textColor="#FFFFFF"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="حذف"
+        android:backgroundTint="#D32F2F"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

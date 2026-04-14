@@ -49,4 +49,13 @@
         android:backgroundTint="@color/accent"
         android:layout_marginTop="10dp" />
 
+    <Button
+        android:id="@+id/btnFieldInfo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="ℹ️ معلومات الملاعب"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1B5E20"
+        android:layout_marginTop="12dp" />
 </LinearLayout>

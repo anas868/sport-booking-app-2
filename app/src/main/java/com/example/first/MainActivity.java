@@ -3,7 +3,7 @@ package com.example.first;
 import android.content.Intent;
 import android.os.Bundle;
 import com.example.first.ui.BookingActivity;
-
+import com.example.first.ui.FieldsInfoActivity;
 import com.example.first.ui.BookingsActivity;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        findViewById(R.id.btnFieldInfo).setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, FieldsInfoActivity.class);
+            startActivity(intent);
+        });
         findViewById(R.id.btnField1).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, BookingActivity.class);
             intent.putExtra("field", "ملعب كرة قدم");
